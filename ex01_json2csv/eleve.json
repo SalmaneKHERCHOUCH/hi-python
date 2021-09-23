@@ -1,0 +1,16 @@
+{
+    "eleve" : [
+        {
+        "nom":"KHERCHOUCH",
+        "prenom":"Salmane",
+        "telephone":"0767957558"
+        },
+
+        {
+        "nom":"LEBRON",
+        "prenom":"James",
+        "telephone":"0600000000"
+
+        }
+    ]
+}
