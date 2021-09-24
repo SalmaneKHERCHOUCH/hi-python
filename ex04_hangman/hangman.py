@@ -1,19 +1,32 @@
 import random
 import words
 
+words = open('words.py').read().strip().split('", "')
+word = random.choice(words)
+print(word)
 
-#On choisit un mot au hasard dans le tableau tab
-def string_random(tab):
-    return random.choice(tab)
-
-#On stock ce mot dans la variable "string_rand"
-string_rand = string_random(tab)
 
 #On créer notre compteur pour chaque coup de l'utilisateur
 compteur = 20
 
 #On demande à l'utilisateur de rentrer une lettre
-letter = input("Entrée une lettre :")
 
-#if len(letter)<= 1:
-#    if letter 
+while compteur != 0 :
+    for i in word :
+        letter = input('Entrer une lettre :')
+        if len(letter)<= 1:
+            print("Vous avez mis 2 lettres tricheur !")
+            if i == letter :
+                print("Cette lettre appartient au mot",i) 
+            elif i != letter : #si la lettre n'est pas dans le mot
+                print("_") #les lettres manquantes
+                print("Cette lettre n'appartient pas au mot")
+                compteur-=1
+                print("Il vous reste " + str(compteur) + " coup")
+
+            if i == word : #s'il devine le mot
+                print(word)
+                print("Vous avez gagnée") 
+
+            if compteur == 0 :
+                print("Vous avez perdu")

@@ -23,8 +23,9 @@ if user_rand == "pierre" or "ciseau" or "papier":
     elif user_rand == "pierre" and bot_rand == "papier" or user_rand == "papier" and bot_rand == "ciseau" or user_rand == "ciseau" and bot_rand == "pierre":
         print("Vous avez perdu")
     elif user_rand == bot_rand:
-        print("C'est une égalité")   
-elif user_rand != "pierre" or "ciseau" or "papier":
-    user_paire = input("La synthaxe de la paire rentrée est incorrect, réessaye :")
-else :
-    print("Erreur")
+        print("C'est une égalité")  
+    elif user_rand != "pierre" or "ciseau" or "papier":
+        print("La synthaxe est incorrect")
+    else :
+        print("Erreur dans la partie")
+
